@@ -1,0 +1,95 @@
+<div [formGroup]="masterGroup">
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <ng-container formArrayName="data" *ngFor="let value of convertControl(masterGroup.get('data')).controls let i = index">
+      <div [formGroupName]="i" class="mt-3 outerLayer " cdkDrag><button [disabled]="value.status !== 'VALID'" (click)="addAdress(i)">Add Address</button>
+      <div class="d-flex gap-5">
+        <div>
+          <div class="mt-3"> 
+            Name:
+            <input matInput formControlName="name">
+          </div>
+          <div class="mt-3">
+            EmailId:
+            <input matInput formControlName="emailId">
+          </div>
+          
+          <div class="mt-3">
+            Phone Number
+            <input matInput formControlName="phoneNumber">
+          </div>
+        </div>
+        <div formArrayName="addressArray" *ngIf="convertControl(value.get('addressArray')) && convertControl(value.get('addressArray')).value && convertControl(value.get('addressArray')).value.length">
+          <ng-container *ngFor="let data of convertControl(value.get('addressArray')).controls;let i = index">
+            <div [formGroupName]="i" class="mt-3">
+              <div> 
+                Address:
+                <input matInput formControlName="addressOne">
+              </div>
+              <div> 
+                DoorNumber:
+                <input matInput formControlName="DoorNumber">
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+       
+      </div>
+    </ng-container>
+  </div>
+
+<div (click)="updateValue()" class="mt-3">Add</div> 
+<div (click)="save()">Save</div>
+</div>
+
+  <!-- <div cdkDropListGroup >
+    <div class="mb-5" [formGroup]="firstgroup" [cdkDropListData]="convertControl(firstgroup.get('data'))" #todoList="cdkDropList" [cdkDropListConnectedTo]="[doneList]" (cdkDropListDropped)="drop($event)" cdkDropList>
+      <div formArrayName="data" *ngFor="let item of convertControl(firstgroup.get('data')).controls; let i = index" cdkDrag> 
+        <div [formGroupName]="i"><div><input matInput formControlName="value"></div></div>
+      </div>
+    </div>
+    
+    <div [formGroup]="secodeGroup" [cdkDropListData]="convertControl(secodeGroup.get('data'))" #doneList="cdkDropList" [cdkDropListConnectedTo]="[todoList]" (cdkDropListDropped)="drop($event)" cdkDropList>
+      <div formArrayName="data" *ngFor="let item of convertControl(secodeGroup.get('data')).controls; let i = index" cdkDrag>
+        <div [formGroupName]="i">
+          <div><input matInput formControlName="value"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="example-container">
+    <h2>To do</h2>
+  
+    <div
+      cdkDropList
+      [formGroup]="firstgroup"
+      #todoList="cdkDropList"
+      [cdkDropListData]="convertControl(firstgroup.get('data'))"
+      [cdkDropListConnectedTo]="[doneList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" formArrayName="data" *ngFor="let item of convertControl(firstgroup.get('data')).controls; let i = index" cdkDrag><div [formGroupName]="i">
+        <div><input matInput formControlName="value"></div>
+      </div></div>
+    </div>
+  </div>
+  
+  <div class="example-container">
+    <h2>Done</h2>
+  
+    <div
+      cdkDropList
+      [formGroup]="secodeGroup"
+      #doneList="cdkDropList"
+      [cdkDropListData]="convertControl(secodeGroup.get('data'))"
+      [cdkDropListConnectedTo]="[todoList]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" formArrayName="data" *ngFor="let item of convertControl(secodeGroup.get('data')).controls; let i = index" cdkDrag>
+        <div [formGroupName]="i">
+          <div><input matInput formControlName="value"></div>
+        </div>
+      </div>
+    </div>
+  </div>

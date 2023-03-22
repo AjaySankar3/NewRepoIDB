@@ -1,0 +1,17 @@
+<div class="box mb-5" [formGroup]="data">
+    <div class="imageContainer">
+        <img [src]="data.getRawValue().image" width="50" height="200" style="border-radius: 10px; margin-top: 15px;">
+        <div class="mt-2">
+            <div class="fs-6">{{data.getRawValue().place_name}}</div>
+            <div class="fs-5 fw-bold">{{data.getRawValue().spots}}</div>
+            <div>
+                <div class="rate-container">$ {{data.getRawValue().priceFrom}} - $ {{data.getRawValue().priceTo}}<span class="per-ceontainer ms-2">/Pax</span></div>
+        </div>
+        <!-- <div class="counterField mt-3"><app-counter-field [data]="data"></app-counter-field></div> -->
+    </div> 
+</div>
+<div class="text-end explore">
+    <button mat-raised-button class="ExploreNow" (click)="explore()">Explore</button>
+</div>
+</div>
+

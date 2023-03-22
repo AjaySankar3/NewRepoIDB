@@ -1,0 +1,61 @@
+<!-- <div>
+  <app-header></app-header>
+</div> -->
+<div>
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer position="end" mode="over" class="drawer">
+        <div class="mt-3 sideHeading"> 
+            <div class="d-flex flex-column gap-5 align-items-center">
+                  <img src="../../assets/Images/User Icons/pngwing.com (1).png" [ngClass]="{'hoverItem1':data['profile1']}"  style="width:50px; height:50px" class="text-center" (mouseover)='over("data.profile1")' (mouseout)='out("data.profile1")'>
+                <img src="../../assets/Images/User Icons/pngwing.com (2).png" style="width:50px; height:50px" [ngClass]="{'hoverItem2':data['profile2']}" (mouseover)='over("data.profile2")' (mouseout)='out("data.profile2")' >
+                <img src="../../assets/Images/User Icons/ticket.png" style="width:50px; height:50px" [ngClass]="{'hoverItem3':data['profile3']}" (mouseover)='over("data.profile3")' (mouseout)='out("data.profile3")'>
+                <img src="../../assets/Images/User Icons/wallet-filled-money-tool.png" style="width:50px; height:50px" [ngClass]="{'hoverItem4':data['profile4']}" (mouseover)='over("data.profile4")' (mouseout)='out("data.profile4")'>
+                <img src="../../assets/Images/User Icons/bookmark.png" style="width:50px; height:50px" [ngClass]="{'hoverItem5':data['profile5']}" (mouseover)='over("data.profile5")' (mouseout)='out("data.profile5")'>
+                <img src="../../assets/Images/User Icons/rating.png" style="width:50px; height:50px" [ngClass]="{'hoverItem6':data['profile6']}" (mouseover)='over("data.profile6")' (mouseout)='out("data.profile6")'>
+                <mat-icon class="location">location_on</mat-icon>
+            </div>
+        </div>
+
+        <!-- <ng-container *ngFor="let value of ticket.controls"> -->
+          <!-- <div *ngIf="value.get('count').getRawValue()">Name : {{value.get('name').value}}</div> -->
+          <!-- <div *ngIf="value.get('count').getRawValue()"><app-counter-field [ticketData]="value"></app-counter-field></div> -->
+        <!-- </ng-container> -->
+
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+</div>
+
+
+<!-- <button mat-raised-button (mouseover)='over()' (mouseout)='out()'>Click</button> -->
+<!-- <mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop.value">
+    <mat-drawer #drawer [mode]="mode.value">I'm a drawer</mat-drawer>
+    <mat-drawer-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Sidenav mode</mat-label>
+        <mat-select #mode value="side">
+          <mat-option value="side">Side</mat-option>
+          <mat-option value="over">Over</mat-option>
+          <mat-option value="push">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Has backdrop</mat-label>
+        <mat-select #hasBackdrop>
+          <mat-option>Unset</mat-option>
+          <mat-option [value]="true">True</mat-option>
+          <mat-option [value]="false">False</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    </mat-drawer-content>
+  </mat-drawer-container> -->
+
+<ng-template>
+    <mat-icon>brightness_6</mat-icon>
+    <mat-icon>brightness_5</mat-icon>
+</ng-template>
+
+

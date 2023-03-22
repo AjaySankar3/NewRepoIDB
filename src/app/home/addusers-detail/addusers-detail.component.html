@@ -1,0 +1,95 @@
+<div [formGroup]="userDetails">
+    <div>
+        Name:
+    </div>
+    <div>
+        <input matInput formControlName="name">
+    </div>
+    <div>
+        EmailId:
+    </div>
+    <div>
+        <input matInput formControlName="userMailId">
+    </div>
+    
+    <div>
+        Phone Number
+    </div>
+    <div>
+        <input matInput formControlName="userPhoneNumber">
+    </div>
+    
+    <div>
+       Address 1
+    </div>
+    <div>
+        <input matInput formControlName="userAddress">
+    </div>
+    <div>
+        Age
+     </div>
+     <div>
+         <input matInput formControlName="age">
+     </div>
+    <div>
+        Enter Number of People Come with you
+    </div>
+    <div>
+        <input matInput formControlName="numberOfPeopleCome">
+    </div>
+    
+    <!-- <div (click)="updateValue()">Add</div>
+
+    <div *ngIf="othersDetail.getRawValue().length">
+        <div *ngFor="let value of othersDetail.controls">
+            <div [formGroup]="convertintoControl(value)">
+
+                <div>
+                    Name:
+                </div>
+                <div>
+                    <input matInput formControlName="userName">
+                </div>
+                <div>
+                    EmailId:
+                </div>
+                <div>
+                    <input matInput formControlName="userMailId">
+                </div>
+                
+                <div>
+                    Phone Number
+                </div>
+                <div>
+                    <input matInput formControlName="userPhoneNumber">
+                </div>
+                
+                <div>
+                   Address 1
+                </div>
+                <div>
+                    <input matInput formControlName="userAddress">
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div (click)="add()">
+        add
+    </div>
+    <div (click)="edit()">
+        edit
+    </div>
+    <div (click)="getDetail()">
+        getDetail
+    </div>
+    <div (click)="deletee()">
+        delete
+    </div>
+    <div (click)="searchThroughIndex()">
+        searchThroughIndex
+    </div>
+    <div (click)="searchThroughIndex()">
+        searchThroughrange
+    </div>
+</div>    

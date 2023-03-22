@@ -1,0 +1,69 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+.rate-container{
+color: #FF8200;
+font-size: 28px;
+font-weight: bold;
+}
+.inputField::-webkit-input-placeholder { 
+    font-family: FontAwesome;
+    font-weight: normal;
+    overflow: visible;
+    vertical-align: top;
+    display: inline-block !important;
+    font-size: 20px;
+    color: #dcddde;
+    }
+.per-ceontainer{
+    color: rgb(112 112 112);
+    font-size: 12px;
+}
+.details{
+    width: 90%;
+    margin: 0 auto;
+}
+.firstlayer{
+    width: 93%;
+    margin: 0 auto;
+}
+.card{
+    width: 90%;
+    border: 1px solid #e9e9e9;
+    border-radius: 15px;
+    height: 30em;
+    margin: 0 auto;
+}
+.BookingNow{
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: white;
+    height: 45px;
+    background-color: #1BB782;
+    box-shadow: none !important;
+}
+.inputField{
+    width: 23em;
+    height: 55px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid #FF8200;
+    padding-left: 20px;
+}
+.locoimage{
+    margin-left: 7em;
+    display: flex;
+    align-items: center;
+}
+.ExploreNow{
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 30px;
+    color: #FF8200;
+    height: 45px;
+    background-color: white;
+    border: 1px solid #e9e9e9;
+    box-shadow: none !important;
+}
+.wholeContainer{
+    background-color: #1BB782;
+}

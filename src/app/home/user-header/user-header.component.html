@@ -1,0 +1,134 @@
+<div class="mt-2 d-flex justify-content-between box">
+    <div class="d-flex">
+        <div>
+            <img src="../../../assets/Images/User Icons/pngwing.com (1).png" style="width:60px" (dblclick)="addUser()">
+        </div>
+        <div class="ms-4">
+            <div class="fs-4 fw-bold">
+                User
+            </div>
+            <div class="fs-6">
+                Die with dreams not memories.
+            </div>
+        </div>
+    </div>
+    <div class="imageContainer">     
+        <button mat-raised-button class="ExploreNow" (click)="openDialog()"> <mat-icon>more_vert</mat-icon></button>
+    </div>
+</div>
+<div class="d-flex">
+
+  <div class="demo-inline-calendar-card text-end">
+  <mat-calendar [(selected)]="selected"></mat-calendar>
+  </div>
+  <div>
+      <div class="mt-4 mb-2">
+        <div>
+            Age:
+        </div>
+        <div class="mt-2">
+            <input matInput  class="inputField">
+        </div>
+      </div>
+      <div class="mb-2">
+        <div>
+            Number of Person:
+        </div>
+        <div class="mt-2">
+            <input matInput  class="inputField">
+        </div>
+      </div>
+      <div class="mb-2">
+        <div>
+            Package:
+        </div>
+        <div class="mt-2">
+            <mat-select class="packageSelect">
+                <mat-option *ngFor="let type of package" [value]="type.value">
+                  {{type.value}}
+                </mat-option>
+              </mat-select>
+        </div>
+      </div>
+      <div>
+        Package Range:
+      </div>
+  </div>
+</div>
+<div class="mt-5">
+    <div class="fs-3 fw-bold">Madeira Travel Schedule</div>
+    <div class="fs-5">12 Destination</div>
+</div>
+
+<ng-template #registor>
+    <div [formGroup]="registorUser">
+        <div class="fs-4 fw-bold mb-3">
+            Registor Form:
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>First name</mat-label>
+                <input matInput placeholder="First name" formControlName="first_name">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last name" formControlName="last_name">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>PassWord</mat-label>
+                <input matInput placeholder="PassWord"formControlName="password">
+              </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button class="BookingNow" (click)="registorApiCall()">login</button>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #login>
+    <div [formGroup]="crud">
+        <div class="fs-4 fw-bold mb-3">
+            Registor:
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Email" formControlName="full_name">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>email</mat-label>
+                <input matInput placeholder="PassWord" formControlName="email">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>password</mat-label>
+                <input matInput placeholder="Email" formControlName="password">
+              </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button class="BookingNow" (click)="Registor()">Registor</button>
+        </div>
+        <!-- <div>
+            <button mat-raised-button class="BookingNow" (click)="post()">POST</button>
+        </div>
+        <div>
+            <button mat-raised-button class="BookingNow" (click)="put()">PUT</button>
+        </div>
+        <div>
+            <button mat-raised-button class="BookingNow" (click)="deletee()">DELETE</button>
+        </div> -->
+    </div>
+</ng-template>

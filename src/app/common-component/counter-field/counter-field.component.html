@@ -1,0 +1,7 @@
+<div [formGroup]="data">
+    <div class="d-flex outerBox">
+        <button mat-raised-button class="button negative" (click)="count(false)">-</button>
+        <input matInput class="inputField" type="number" formControlName="numberOfItem">
+        <button mat-raised-button  class="button" (click)="count(true)">+</button>
+    </div>
+</div>

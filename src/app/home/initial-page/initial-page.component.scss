@@ -1,0 +1,112 @@
+.location{
+    height: 50px !important;
+    width: 50px !important;
+    font-size: 50px !important;
+}
+.box{
+    height: 60.5em;
+    background-color: #C8EADE;
+    display: flex;
+    background: linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
+}
+.secondLayer{
+    width: 100%;
+    background-color: white;
+}
+.border{
+    width: 60%;
+    border-bottom: 1px solid #ECF0F2;
+ 
+    margin: 0 auto;
+}
+.firstColumn{
+    background-color: white;
+    border-right: 1px solid #ECF0F2;
+}
+.wholeContainer{
+    background: linear-gradient(180deg, white , white,#f2f2f2 );
+}
+.wholeContainerheader{
+    background: linear-gradient(180deg, #EDFAF6 , #EDFAF6,#EDFAF6 );
+}
+.example-card{
+    border: 5;
+    position: absolute;
+    width: 41%;
+    height: 25em;
+    top: 25%;
+    left: 31%;
+    margin: 0 auto;
+}
+.outerlayer{
+    height: 60em;
+    position: relative;
+}
+.example-container {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .example-list {
+    // border: solid 1px #ccc;
+    min-height: 38em;
+    background: gray;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .example-box {
+    padding: 20px 10px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: white;
+    font-size: 14px;
+  }
+  
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+  .example-box:last-child {
+    border: none;
+  }
+  
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  .outerBox{
+    width: 25em;
+    height: 25em;
+    border: 1px solid black;
+    position: relative;
+  }
+  .innerBox{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid red;
+    position: absolute;
+    bottom: 0;
+  }
